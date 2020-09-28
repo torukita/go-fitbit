@@ -40,11 +40,11 @@ You need get access token from [fitbit developer site](https://dev.fitbit.com).
 client := fitbit.New("YOUR_ACCESS_TOKEN")
 
 // get your own devices
-v, err := client.GetDevices()
+v, _, err := client.GetDevices()
 // v is fitbit.Devices struct
 
 // get token status
-v, err := client.TokenState()
+v, _, err := client.TokenState()
 // you can know current token is valid or not by checking v.Active is true or not
 if v.Active {
   // token is valid
